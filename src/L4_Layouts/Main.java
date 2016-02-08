@@ -27,12 +27,14 @@ public class Main extends Application{
         window.setTitle("Layouts");
         Button btn1 = new Button("BorderPane,HBox,VBox");
         Button btn2 = new Button("GridPane");
+        Button btn3 = new Button("VBox With Checkboxes");
 
         btn1.setOnAction(e ->BorderPaneLayout.display());
         btn2.setOnAction(e ->GridPaneLayout.display());
+        btn3.setOnAction(e ->VBoxCheckboxes.display());
 
         VBox layout = new VBox();
-        layout.getChildren().addAll(btn1,btn2);
+        layout.getChildren().addAll(btn1,btn2,btn3);
         Scene scene = new Scene(layout, 300, 250);
         window.setScene(scene);
         window.show();

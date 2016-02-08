@@ -3,6 +3,7 @@ package L4_Layouts;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
@@ -31,19 +32,16 @@ public class GridPaneLayout {
         //Password Label
         Label passLabel = new Label("Password:");
         GridPane.setConstraints(passLabel, 0, 1);
-
-        //Password Input
+//
+//        //Password Input
         TextField passInput = new TextField();
         passInput.setPromptText("password");
         GridPane.setConstraints(passInput, 1, 1);
-
+        
         //Login
         Button loginButton = new Button("Log In");
-        GridPane.setConstraints(loginButton, 1, 2);
-        loginButton.setOnAction(e->{
-        	System.out.println("Tring to Login...");
-        	
-        });
+        GridPane.setConstraints(loginButton, 1, 3);
+        loginButton.setOnAction(e->TryLogin(nameInput.getText(),passInput.getText()));
 
         //Add everything to grid
         grid.getChildren().addAll(nameLabel, nameInput, passLabel, passInput, loginButton);
@@ -52,5 +50,10 @@ public class GridPaneLayout {
         window.setScene(scene);
         window.show();
     }
+
+	private static Object TryLogin(String name,String pass) {
+		System.out.println("Logining "+name+" ,Pass: "+pass);
+		return null;
+	}
 
 }
