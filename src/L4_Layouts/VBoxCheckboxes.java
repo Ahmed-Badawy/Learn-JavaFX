@@ -42,11 +42,11 @@ public class VBoxCheckboxes {
         
         ListView<String> listView = new ListView<>();
         listView.getItems().addAll(StringArray);
-        listView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        listView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE); //allow Multible Selection
         
         
         Button submitButton = new Button("Submit");
-        submitButton.setOnAction(e -> handleOptions(box1, box2,listView));
+        submitButton.setOnAction(e -> handleOptions(box1,box2,listView));
         
         
         layout.getChildren().addAll(box1,box2,choiceBox,comboBox,listView,submitButton);

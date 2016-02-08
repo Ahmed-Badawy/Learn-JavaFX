@@ -1,14 +1,8 @@
 package L4_Layouts;
 
-import javafx.geometry.Insets;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
-import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
@@ -47,10 +41,7 @@ public class TreeViewViewing {
         TreeView<String> tree = new TreeView<>(root);
         tree.setShowRoot(false);
         tree.getSelectionModel().selectedItemProperty()
-                .addListener((v, oldValue, newValue) -> {
-                    if (newValue != null)
-                        System.out.println(newValue.getValue());
-                });
+                .addListener((v, oldValue, newValue) -> { if (newValue != null) System.out.println(newValue.getValue()); } );
 
         //Layout
         StackPane layout = new StackPane();
