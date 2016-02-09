@@ -1,4 +1,4 @@
-package L4_Layouts;
+package L4_Layouts_and_Elements;
 
 public class product_model {
     private String name;

@@ -1,0 +1,32 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+/* 
+ * 1- You must prepent every attribute with a (-fx-)
+ * 2- if you want to target all elements of a type just use the lowercased type as a css class - EX:(.button) means target all buttons
+ * 3- you can add an inline style in java file EX: 	        btn1.setStyle("-fx-background-color:green"); //adding inline style
+ * 4- you can add a defined id to an element in java file EX: 	    btn1.setId("id_name"); //you added an id to this element
+ * 5- you can add a defined class to an element in java file EX: 	    btn1.getStyleClass().add("class_name"); //you added a Custom Defined Class 
+ 
+ */
+ 
+.root{ /* target the root element */
+	-fx-background-color:#444;
+	-fx-color:white
+}
+.button{ /* target all buttons in project */
+	-fx-color:white;
+	-fx-background-color:linear-gradient(#dc9656,#ab4642);
+}
+
+
+
+#id_name{ /*target defined id */
+	-fx-background-color:red;
+}
+.class_name{ /* target defined class */
+	-fx-background-color:yellow;
+}
+
+
+
+
