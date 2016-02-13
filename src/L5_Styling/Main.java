@@ -64,7 +64,10 @@ public class Main extends Application{
 	        grid.getChildren().addAll(nameLabel, nameInput, passLabel, passInput, loginButton, signUpButton);
 
 	        Scene scene = new Scene(grid, 300, 200);
-	        scene.getStylesheets().add("L5_Styling/custom_style.css");
+	        
+//	        scene.getStylesheets().add("L5_Styling/custom_style.css");
+	        scene.getStylesheets().add(getClass().getResource("custom_style.css").toExternalForm());
+
 	        window.setScene(scene);
 	        window.show();
 	        

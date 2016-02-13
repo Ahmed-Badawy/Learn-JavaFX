@@ -1,21 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
 <!--  the fx:controller must have the exact controller class implemented -->
-<VBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="L7_FXML.Controller">
 
-
-
-<!-- first name -->    
-    <Label text="What's Your Name ?" />
-	<TextField fx:id="username" text="Ahmed Badawy"></TextField>
-    <Button text="Submit" fx:id="btn1" onAction="#btn_clicked"/>
-<!-- Binding Data : -->  
-    <Label text="Binded Data:" />
-     <Label text="${username.text}"/>
+<VBox fx:id="black" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="L7_FXML.Controller">
+   <children>
+   
+   
+   
+   <!-- first name -->    
+       <Label text="What's Your Name ?" />
+   	<TextField fx:id="username" prefHeight="25.0" prefWidth="491.0" text="Ahmed Badawy" />
+       <Button fx:id="btn1" onAction="#btn_clicked" text="On Action Listener" />
+   <!-- Binding Data : -->  
+       <Label text="Binded Data:" />
+        <Label onMouseEntered="#method_two" text="${username.text}" />
+   </children>
+   <padding>
+      <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+   </padding>
      
      
     
