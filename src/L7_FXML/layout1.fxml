@@ -7,7 +7,7 @@
 
 <!--  the fx:controller must have the exact controller class implemented -->
 
-<VBox fx:id="black" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="L7_FXML.Controller">
+<VBox fx:id="black" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="L7_FXML.Custom_Controller">
    <children>
    
    
