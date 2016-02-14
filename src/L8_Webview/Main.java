@@ -1,4 +1,4 @@
-package L7_FXML;
+package L8_Webview;
 	
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -21,9 +21,6 @@ public class Main extends Application{
 	        
 	        Scene scene = new Scene(root, 1200, 700);
 	        
-//	        scene.getStylesheets().add("L7_FXML/custom_style.css");
-	        scene.getStylesheets().add(getClass().getResource("custom_style.css").toExternalForm());
-
 	        primaryStage.setScene(scene);
 	        primaryStage.show();
 		} catch(Exception e) {

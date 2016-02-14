@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.geometry.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
@@ -7,23 +8,74 @@
 
 <!--  the fx:controller must have the exact controller class implemented -->
 
-<VBox fx:id="black" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="L7_FXML.Custom_Controller">
+<VBox fx:id="black" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="L7_FXML.Controller">
+
    <children>
-   
-   
-   
-   <!-- first name -->    
-       <Label text="What's Your Name ?" />
-   	<TextField fx:id="username" prefHeight="25.0" prefWidth="491.0" text="Ahmed Badawy" />
-       <Button fx:id="btn1" onAction="#btn_clicked" text="On Action Listener" />
-   <!-- Binding Data : -->  
-       <Label text="Binded Data:" />
-        <Label onMouseEntered="#method_two" text="${username.text}" />
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+         <!-- first name -->    
+             <Label prefHeight="0.0" prefWidth="108.0" text="What's Your Name ?" />
+         	<TextField fx:id="username" prefHeight="25.0" prefWidth="491.0" text="Ahmed Badawy" />
+         <!-- Binding Data : -->  
+             <Label text="Binded Data:" />
+              <Label onMouseEntered="#method_two" text="${username.text}" />
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            
+                   <Button fx:id="btn1" onAction="#btn_clicked" text="Button-On Action Listener" />
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+              
+      
+              
+      <!--
+      - you can resize the image from the fitHeight= & fitWidth=  
+      - you can use the preserveRatio="true" on ImageView to perserve Ratio of the image
+       -->  
+            <ImageView fitHeight="250.0" fitWidth="500.0" pickOnBounds="true">
+                  	<image>
+                  		<Image url="L7_FXML/me.jpg" />
+                  	</image>
+            </ImageView>
+            
+      <!-- image button: -->      
+            <Button text="This is an Image Button">
+      	      <graphic>
+      	            <ImageView>
+      	            	<image>
+      	            		<Image url="L7_FXML/me.jpg" />
+      	            	</image>
+      	      		</ImageView>
+      	      </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+         	
+            <ComboBox fx:id="combo" onAction="#method_two" prefWidth="150.0" promptText="Choose A Number" />
+            <ListView fx:id="listview1" prefHeight="200.0" prefWidth="200.0" />
+            <DatePicker promptText="date" showWeekNumbers="true" />
+         </children>
+      </HBox>
+<!-- ************************************ -->      
+      
+      
+      
+      
+      
+      
+      
+      
    </children>
    <padding>
       <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
    </padding>
      
-     
+   
     
 </VBox>

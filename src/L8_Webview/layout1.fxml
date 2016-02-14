@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!--  the fx:controller must have the exact controller class implemented -->
+
+
+<VBox fx:id="black" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="L8_Webview.Controller">
+   <children>
+      <WebView fx:id="webview1" prefHeight="639.0">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </WebView>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#btn1" text="Button 1" />
+            <Button mnemonicParsing="false" onAction="#btn2" text="Button 2" />
+            <Button mnemonicParsing="false" onAction="#btn3" text="Button 3" />
+            <Button mnemonicParsing="false" onAction="#btn4" text="Button 4" />
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>
